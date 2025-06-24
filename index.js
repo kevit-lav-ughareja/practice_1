@@ -1,10 +1,11 @@
 var express = require("express");
 var app = express();
 
-// This responds with "Hello World" on the homepage
+//In the 1st feature branch, modify the same get all endpoint with:
 app.get("/", function (req, res) {
   console.log("Got a GET request for the homepage");
-  res.send("Hello GET");
+  const userCount = 10;
+  res.send(`Hello GET. Users are: ${userCount}`);
 });
 
 // This responds a POST request for the homepage
